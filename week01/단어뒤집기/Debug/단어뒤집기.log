@@ -1,0 +1,3 @@
+﻿  단어뒤집기.cpp
+C:\Users\van13\Desktop\week01\단어뒤집기\단어뒤집기.cpp(6,23): warning C4101: 'tt' :참조되지 않은 지역 변수입니다.
+  단어뒤집기.vcxproj -> C:\Users\van13\Desktop\week01\Debug\단어뒤집기.exe
