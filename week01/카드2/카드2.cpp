@@ -1,26 +1,24 @@
 #include<iostream>
-
+#include<queue>
 using namespace std;
 
 int main() {
 	int t;
 	cin >> t;
-	int* a;
-	a = new int[t];
+	queue<int> q;
 	for (int i = 0; i < t; i++) {
-		a[i] = i + 1;
+		q.push(i+1);
 	}
 
-	for (int i = 0; i < t-1; i++) {
-		for (int j = 0; j < t - i; j++) {
-			a[j] = a[j + 1];
+	while (true) {
+		if (q.size() == 1) {
+			break;
 		}
-		a[t - i - 1] = a[0];
-		for (int j = 0; j < t - i; j++) {
-			a[j] = a[j + 1];
-		}
-
+		q.pop();
+		q.push(q.front());
+		q.pop();
 	}
-	cout << a[0];
+	
+	cout << q.front();
 
 }

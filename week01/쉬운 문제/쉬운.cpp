@@ -3,20 +3,17 @@
 using namespace std;
 
 int main() {
-	int a;
-	int b;
-	cin >> a;
-	cin >> b;
-	if (a > 0 && b > 0) {
-		cout << 1;
+	int a[9], max=0,idx=0,t;
+	for (int i = 0; i < 9; i++) {
+		cin >> t;
+		a[i] = t;
 	}
-	else if (a > 0 && b < 0) {
-		cout << 4;
+	for (int j = 0; j < 9; j++) {
+		if (a[j] > max) {
+			max = a[j];
+			idx = j;
+		}
 	}
-	else if (a < 0 && b < 0) {
-		cout << 3;
-	}
-	else if (a < 0 && b > 0) {
-		cout << 2;
-	}
+	cout << max << '\n';
+	cout << idx;
 }
