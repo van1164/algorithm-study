@@ -1,19 +1,17 @@
 #include<iostream>
-
+#include<algorithm>
 using namespace std;
 
-int main() {
-	int a[9], max=0,idx=0,t;
-	for (int i = 0; i < 9; i++) {
-		cin >> t;
-		a[i] = t;
+
+bool desc(int a, int b) { return a > b; }
+int main(){
+
+	char arr[30];
+	cin >> arr;
+	sort(arr, arr + 30, desc);
+	for (int i = 0; arr[i] != NULL; i++) {
+		cout << arr[i];
 	}
-	for (int j = 0; j < 9; j++) {
-		if (a[j] > max) {
-			max = a[j];
-			idx = j;
-		}
-	}
-	cout << max << '\n';
-	cout << idx;
 }
+
+

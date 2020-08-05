@@ -23,6 +23,7 @@
     <ProjectGuid>{621115E3-90A4-438A-86A0-38EBAA3DFFE7}</ProjectGuid>
     <RootNamespace>단어뒤집기</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>단어뒤집기 - 미완</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
