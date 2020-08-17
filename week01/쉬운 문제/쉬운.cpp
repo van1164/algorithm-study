@@ -5,20 +5,30 @@
 using namespace std;
 
 int main() {
-	long long int a, b, v, result = 0,i=0;
-	cin >> a >> b >> v;
-	while (result<=v)
-	{
-		result = result + a;
-		if (result >= v) {
-			i++;
-			break;
-		}
-		result = result - b;
-		i++;
+	int t;
+	cin >> t;
+	int* arr;
+	arr = new int[t];
+	int a;
+	for (int i = 0; i < t; i++) {
+		cin >> a;
+		arr[i] = a;
 	}
-	cout << i;
-
-
+	int x = t;
+	for (int i = t-1; i >=0; i--){
+		for (int j = 0; j < i; j++) {
+			if (arr[i] == -1) {
+				break;
+			}
+			if (arr[j] == -1) {
+				continue;
+			}
+			if (arr[i] >= arr[j]) {
+				arr[j] = -1;
+				x--;
+			}
+		}
+	}
+	cout << x;
 }
 
